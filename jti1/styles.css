@@ -1117,3 +1117,104 @@ body.modal-open {
     font-size: 9.5px;
   }
 }
+
+
+/* MOBILE FINAL TUNING — first screen only */
+@media (max-width: 850px) {
+  .first-screen {
+    min-height: auto;
+    padding-bottom: 18px;
+  }
+
+  .first-screen .hero-card {
+    aspect-ratio: 1.06 / 1;
+    padding: 24px 18px;
+  }
+
+  .first-screen .hello {
+    width: 49%;
+    position: relative;
+    z-index: 5;
+  }
+
+  .first-screen h1 {
+    font-size: clamp(39px, 10.8vw, 50px);
+    line-height: .91;
+  }
+
+  .first-screen .intro {
+    max-width: 175px;
+    margin-top: 20px;
+    font-size: 10.5px;
+    line-height: 1.45;
+  }
+
+  .first-screen .resume {
+    margin-top: 17px;
+    max-width: 155px;
+    min-height: 42px;
+    padding: 10px 11px;
+    gap: 12px;
+    font-size: 9.5px;
+    position: relative;
+    z-index: 6;
+  }
+
+  .first-screen .portrait {
+    right: -3%;
+    bottom: 0;
+    width: 58%;
+    height: auto;
+    z-index: 2;
+  }
+
+  .first-screen .portrait img {
+    width: 100%;
+    height: auto;
+    transform: none;
+  }
+
+  /* Only reduce the gap between the two existing blocks. */
+  .second-screen {
+    padding-top: 34px;
+  }
+}
+
+@media (max-width: 520px) {
+  .first-screen {
+    padding-bottom: 14px;
+  }
+
+  .first-screen .hero-card {
+    aspect-ratio: 1.04 / 1;
+    padding: 22px 16px;
+  }
+
+  .first-screen .hello {
+    width: 49%;
+  }
+
+  .first-screen h1 {
+    font-size: clamp(37px, 10.4vw, 47px);
+  }
+
+  .first-screen .intro {
+    margin-top: 18px;
+    font-size: 10px;
+  }
+
+  .first-screen .resume {
+    margin-top: 15px;
+    max-width: 150px;
+    font-size: 9.2px;
+  }
+
+  .first-screen .portrait {
+    right: -4%;
+    width: 59%;
+  }
+
+  .second-screen {
+    padding-top: 30px;
+  }
+}
