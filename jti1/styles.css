@@ -638,3 +638,247 @@ h2 {
   h1 { font-size: 43px; }
   .intro { font-size: 11px; }
 }
+
+
+/* =========================================================
+   FINAL UNIVERSAL RESPONSIVE OVERRIDES
+   Mobile layout is independent from desktop composition.
+   ========================================================= */
+
+@media (max-width: 850px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .screen,
+  .first-screen,
+  .second-screen {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .first-screen {
+    min-height: auto !important;
+    padding: 16px 14px 56px !important;
+  }
+
+  .topbar {
+    width: 100% !important;
+    margin: 0 0 14px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+  }
+
+  .vacancy-top {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    max-width: calc(100% - 108px) !important;
+    min-width: 0 !important;
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+  }
+
+  .socials {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    gap: 4px !important;
+  }
+
+  .socials a,
+  .socials a img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .hero-card {
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    margin: 0 !important;
+    padding: 34px 22px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    overflow: hidden !important;
+    border-radius: 22px !important;
+  }
+
+  .hello {
+    position: relative !important;
+    width: 100% !important;
+    max-width: none !important;
+    z-index: 3 !important;
+  }
+
+  h1 {
+    font-size: clamp(48px, 14vw, 68px) !important;
+    line-height: .9 !important;
+  }
+
+  .intro {
+    margin: 22px 0 0 !important;
+    max-width: 320px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+
+  .resume {
+    margin-top: 20px !important;
+    max-width: 100% !important;
+    min-height: 48px !important;
+    padding: 13px 15px !important;
+    gap: 20px !important;
+  }
+
+  .portrait {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: 108% !important;
+    height: auto !important;
+    margin: 6px -4% -2px !important;
+    z-index: 2 !important;
+    flex: none !important;
+  }
+
+  .portrait img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+  }
+
+  .hero-note {
+    display: none !important;
+  }
+
+  .scroll {
+    display: flex !important;
+    width: 100% !important;
+    margin: 14px 0 0 !important;
+    justify-content: center !important;
+  }
+
+  .second-screen {
+    min-height: auto !important;
+    padding: 54px 14px 60px !important;
+  }
+
+  .section-head {
+    width: 100% !important;
+    display: block !important;
+    margin: 0 0 24px !important;
+  }
+
+  .section-head .label {
+    margin-bottom: 14px !important;
+  }
+
+  h2 {
+    font-size: clamp(46px, 13vw, 66px) !important;
+    line-height: .92 !important;
+  }
+
+  .section-head > p {
+    margin: 18px 0 0 !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  .video-card {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9 !important;
+    margin: 0 !important;
+    border-radius: 16px !important;
+  }
+
+  .video-card > img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .bottom {
+    width: 100% !important;
+    margin: 28px 0 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+
+  .message > p {
+    max-width: none !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  .contact-card {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .contact-card a {
+    min-height: 50px !important;
+  }
+
+  .video-modal {
+    padding: 10px !important;
+  }
+
+  .video-modal__dialog {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .first-screen { padding-left: 12px !important; padding-right: 12px !important; }
+  .second-screen { padding-left: 12px !important; padding-right: 12px !important; }
+
+  .vacancy-top {
+    max-width: calc(100% - 104px) !important;
+    font-size: 9px !important;
+  }
+
+  .socials a,
+  .socials a img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .hero-card {
+    padding: 30px 18px 0 !important;
+    border-radius: 20px !important;
+  }
+
+  h1 { font-size: clamp(45px, 13.5vw, 62px) !important; }
+
+  .intro {
+    font-size: 12px !important;
+    margin-top: 18px !important;
+  }
+
+  .resume {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .portrait {
+    width: 112% !important;
+    margin-left: -6% !important;
+    margin-right: -6% !important;
+  }
+
+  .second-screen { padding-top: 50px !important; }
+}
