@@ -899,3 +899,328 @@ body.modal-open {
 .portrait img {
   transform: translateY(4.5%);
 }
+
+
+/* =========================================================
+   UNIVERSAL ADAPTIVE LAYOUT — DESKTOP / TABLET / MOBILE
+   Desktop composition above remains unchanged.
+   ========================================================= */
+
+@media (max-width: 850px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .screen {
+    width: 100%;
+    min-height: 100svh;
+    padding: 18px 16px 28px;
+  }
+
+  .topbar {
+    width: 100%;
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+
+  .vacancy-top {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: none;
+    font-size: 10px;
+    line-height: 1.35;
+  }
+
+  .vacancy-top span,
+  .vacancy-top strong {
+    overflow-wrap: anywhere;
+  }
+
+  .socials {
+    flex: 0 0 auto;
+    gap: 4px;
+  }
+
+  .socials a,
+  .socials a img {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* Hero becomes a taller, touch-friendly composition on small screens. */
+  .hero-card {
+    width: 100%;
+    min-height: min(610px, calc(100svh - 105px));
+    height: auto;
+    aspect-ratio: auto;
+    padding: 34px 24px 28px;
+    border-radius: 22px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hello {
+    width: 68%;
+    max-width: 430px;
+    position: relative;
+    z-index: 4;
+  }
+
+  h1 {
+    font-size: clamp(46px, 12vw, 70px);
+    line-height: .91;
+  }
+
+  .intro {
+    margin-top: 24px;
+    max-width: 270px;
+    font-size: clamp(12px, 3.2vw, 15px);
+    line-height: 1.45;
+  }
+
+  .resume {
+    margin-top: 22px;
+    min-height: 44px;
+    padding: 12px 15px;
+    gap: 22px;
+    font-size: 11px;
+  }
+
+  .portrait {
+    position: absolute;
+    z-index: 2;
+    right: -5%;
+    bottom: -1px;
+    width: 72%;
+    height: auto;
+    aspect-ratio: 1136 / 1054;
+    display: block;
+    overflow: visible;
+    margin: 0;
+  }
+
+  .portrait img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    display: block;
+    object-fit: contain;
+    object-position: right bottom;
+    transform: translateY(4.5%);
+  }
+
+  .scroll {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    min-height: 36px;
+    justify-content: flex-end;
+  }
+
+  .second-screen {
+    padding-top: 62px;
+    padding-bottom: 48px;
+  }
+
+  .section-head,
+  .video-card,
+  .bottom {
+    width: 100%;
+  }
+
+  .section-head {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-size: clamp(48px, 13vw, 76px);
+    line-height: .93;
+  }
+
+  .section-head > p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .video-card {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+  }
+
+  .play {
+    width: 58px;
+    height: 58px;
+  }
+
+  .bottom {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 28px;
+  }
+
+  .message > p {
+    max-width: none;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .signature {
+    margin-top: 22px;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: none;
+    padding: 12px 16px;
+    border-radius: 14px;
+  }
+
+  .contact-card a {
+    min-height: 48px;
+    padding: 13px 2px;
+    font-size: 13px;
+  }
+
+  /* Video popup uses the full available phone screen. */
+  .video-modal {
+    padding: 12px;
+  }
+
+  .video-modal__dialog {
+    width: 100%;
+    max-width: 100%;
+    max-height: 92svh;
+    border-radius: 12px;
+  }
+
+  .video-modal__dialog video {
+    width: 100%;
+    max-height: 92svh;
+  }
+
+  .video-modal__close {
+    top: 8px;
+    right: 8px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 520px) {
+  .screen {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .vacancy-top {
+    font-size: 9px;
+  }
+
+  .socials a,
+  .socials a img {
+    width: 31px;
+    height: 31px;
+  }
+
+  .hero-card {
+    min-height: 540px;
+    padding: 28px 18px 22px;
+    border-radius: 19px;
+  }
+
+  .hello {
+    width: 66%;
+  }
+
+  h1 {
+    font-size: clamp(42px, 12.5vw, 56px);
+  }
+
+  .intro {
+    margin-top: 20px;
+    font-size: 11px;
+    line-height: 1.42;
+  }
+
+  .resume {
+    margin-top: 17px;
+    min-height: 42px;
+    padding: 11px 12px;
+    gap: 16px;
+    font-size: 10px;
+  }
+
+  .portrait {
+    width: 78%;
+    right: -7%;
+  }
+
+  .second-screen {
+    padding-top: 54px;
+  }
+
+  h2 {
+    font-size: clamp(45px, 13.5vw, 60px);
+  }
+
+  .section-head > p {
+    font-size: 12px;
+  }
+
+  .message > p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .vacancy-top {
+    font-size: 8px;
+  }
+
+  .socials a,
+  .socials a img {
+    width: 29px;
+    height: 29px;
+  }
+
+  .hero-card {
+    min-height: 510px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hello {
+    width: 68%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .intro {
+    font-size: 10px;
+  }
+
+  .portrait {
+    width: 80%;
+    right: -9%;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 850px) {
+  .hero-card {
+    min-height: 500px;
+  }
+}
