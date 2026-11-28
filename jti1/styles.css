@@ -1039,7 +1039,7 @@ body.modal-open {
 }
 
 
-/* MOBILE HERO V4 — only mobile layout */
+/* MOBILE HERO V5 — only mobile layout: larger portrait, raised, fills bottom */
 @media (max-width: 850px) {
   .hero-card {
     background: #e4e6e9 !important;
@@ -1048,11 +1048,12 @@ body.modal-open {
     overflow: hidden;
   }
 
-  /* Mobile only: move the portrait up and let it reach the bottom of the card. */
+  /* The portrait is intentionally oversized: its bottom stays at the card edge,
+     while the larger image rises into the upper-right area. */
   .portrait {
-    width: 84%;
-    height: 125%;
-    right: -5%;
+    width: 105%;
+    height: 150%;
+    right: -9%;
     bottom: 0;
     z-index: 1;
   }
@@ -1064,7 +1065,7 @@ body.modal-open {
     object-position: right bottom;
   }
 
-  /* Keep the text and resume button above the portrait if their areas overlap. */
+  /* Text and button stay above the photo if the enlarged portrait reaches them. */
   .hello {
     position: relative;
     z-index: 3;
@@ -1083,9 +1084,9 @@ body.modal-open {
   }
 
   .portrait {
-    width: 84%;
-    height: 125%;
-    right: -5%;
+    width: 105%;
+    height: 150%;
+    right: -9%;
     bottom: 0;
   }
 }
