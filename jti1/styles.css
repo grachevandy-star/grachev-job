@@ -1090,3 +1090,70 @@ body.modal-open {
     bottom: 0;
   }
 }
+
+/* FINAL MOBILE CROSS-BROWSER HERO — width-driven portrait, no viewport-height dependence */
+@media (max-width: 850px) {
+  .first-screen {
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  .hero-card {
+    height: 450px;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    overflow: hidden;
+    position: relative;
+    background: #e4e6e9 !important;
+  }
+
+  .hello {
+    position: relative;
+    z-index: 5;
+  }
+
+  .portrait {
+    position: absolute;
+    z-index: 2;
+    right: -8%;
+    bottom: 0;
+    width: 108%;
+    height: auto;
+    margin: 0;
+    display: block;
+    overflow: visible;
+  }
+
+  .portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+    object-position: right bottom;
+    transform: none;
+  }
+
+  .resume {
+    position: relative;
+    z-index: 6;
+  }
+
+  .second-screen {
+    min-height: auto;
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-card {
+    height: 450px;
+  }
+
+  .portrait {
+    right: -8%;
+    width: 108%;
+    bottom: 0;
+  }
+}
