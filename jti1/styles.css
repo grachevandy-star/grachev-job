@@ -1048,11 +1048,12 @@ body.modal-open {
     overflow: hidden;
   }
 
+  /* Mobile only: move the portrait up and let it reach the bottom of the card. */
   .portrait {
-    width: 72%;
-    height: 118%;
-    right: -2%;
-    bottom: 38%;
+    width: 84%;
+    height: 125%;
+    right: -5%;
+    bottom: 0;
     z-index: 1;
   }
 
@@ -1063,9 +1064,15 @@ body.modal-open {
     object-position: right bottom;
   }
 
+  /* Keep the text and resume button above the portrait if their areas overlap. */
   .hello {
     position: relative;
     z-index: 3;
+  }
+
+  .resume {
+    position: relative;
+    z-index: 4;
   }
 }
 
@@ -1076,9 +1083,9 @@ body.modal-open {
   }
 
   .portrait {
-    width: 72%;
-    height: 118%;
-    right: -3%;
-    bottom: 38%;
+    width: 84%;
+    height: 125%;
+    right: -5%;
+    bottom: 0;
   }
 }
