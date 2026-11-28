@@ -1037,3 +1037,48 @@ body.modal-open {
     padding-top: 30px;
   }
 }
+
+
+/* MOBILE HERO V4 — only mobile layout */
+@media (max-width: 850px) {
+  .hero-card {
+    background: #e4e6e9 !important;
+    height: 450px;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .portrait {
+    width: 72%;
+    height: 118%;
+    right: -2%;
+    bottom: -2%;
+    z-index: 1;
+  }
+
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+  }
+
+  .hello {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-card {
+    height: 450px;
+    background: #e4e6e9 !important;
+  }
+
+  .portrait {
+    width: 72%;
+    height: 118%;
+    right: -3%;
+    bottom: -2%;
+  }
+}
