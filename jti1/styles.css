@@ -1116,7 +1116,7 @@ body.modal-open {
   .portrait {
     position: absolute;
     z-index: 2;
-    right: -8%;
+    right: -20%;
     bottom: 0;
     width: 108%;
     height: auto;
@@ -1152,7 +1152,7 @@ body.modal-open {
   }
 
   .portrait {
-    right: -8%;
+    right: -20%;
     width: 108%;
     bottom: 0;
   }
